@@ -1,3 +1,5 @@
+I made this fork for gui-cli-toggle now because I've switched from glitt3ring to Zheralix.
+
 Required Dependencies:
 1. sudo (Or polkit, If you modify the gui-cli-toggle bash script)
 2. systemd
