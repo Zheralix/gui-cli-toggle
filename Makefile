@@ -2,7 +2,7 @@ PREFIX = /usr/local
 
 all:
         @echo Run \'make install\' to install GUI-CLI-Toggle.
-        @echo Dependencies\: \'sudo systemd bash \<display-manager\: Choose either gdm sddm lightdm lxdm xdm ly\>\'
+        @echo Dependencies\: \'sudo systemd bash make coreutils \<display-manager\: Choose either gdm sddm lightdm lxdm xdm ly\>\'
 
 install:
         @sudo mkdir -pv ${DESTDIR}/${PREFIX}/bin
