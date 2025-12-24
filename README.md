@@ -4,6 +4,8 @@ Required Dependencies:
 1. sudo (Or polkit, If you modify the gui-cli-toggle bash script)
 2. systemd
 3. bash
+4. make
+5. coreutils
 
 Display Managers (CHOOSE ONLY ONE):
 1. gdm
