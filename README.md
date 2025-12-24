@@ -8,7 +8,7 @@ TODOLIST:
 5. Turn this into a source that compiles with a compiler.
 6. Make a configure script for selecting PREFIX.
 7. Add colors and an option to disable colors: "--no-color".
-8. Make the script run all commands with polkit (But it only asks for password once) instead of sudo...
+8. Make the script run all commands with polkit (But it only asks for password once) instead of sudo.
 9. Make an Initial Release.
 ...
 
@@ -34,5 +34,5 @@ Installing the Script:
 4. If you are not using /usr or /usr/local and/or the PREFIX is not in your PATH, Then you will have to run PREFIX/bin/gui-cli-toggle, For example: "/opt/gui-cli-toggle/bin/gui-cli-toggle".
 
 If you don't know what these variables mean, Then:
-1. PATH: The PATH variable is exported to the path of binaries, For Example PATH=/usr/bin:/usr/local/bin:/usr/sbin:/usr/local/sbin
-2. PREFIX: The PREFIX variable is usually /usr/local, For example: if you make the PREFIX /foo/bar, Then the binary will be in /foo/bar/bin/gui-cli-toggle.
+1. PATH: The PATH variable is exported to the path of binaries, For Example PATH=/usr/bin:/usr/local/bin:/usr/sbin:/usr/local/sbin.
+2. PREFIX: The PREFIX variable is usually /usr/local, But /usr is the most preferred, Especially in LFS (Linux From Scratch), For example: if you make the PREFIX /foo/bar, Then the binary will be in /foo/bar/bin/gui-cli-toggle.
