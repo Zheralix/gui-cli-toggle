@@ -1,5 +1,5 @@
-Dependencies:
-1. sudo 
+Required Dependencies:
+1. sudo (Or polkit, If you modify the gui-cli-toggle bash script)
 2. systemd
 3. bash
 
