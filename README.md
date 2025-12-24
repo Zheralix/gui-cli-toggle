@@ -1,11 +1,12 @@
-Dependencies: 
-  sudo 
-  systemd
-  bash
+Dependencies:
+1. sudo 
+2. systemd
+3. bash
+
 Display Managers (CHOOSE ONLY ONE):
-  gdm
-  sddm
-  lightdm
-  lxdm
-  xdm
-  ly
+1. gdm
+2. sddm
+3. lightdm
+4. lxdm
+5. xdm
+6. ly
