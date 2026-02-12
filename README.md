@@ -1,36 +1,55 @@
-TODOLIST:
-1. Make an option to switch on Reboot: "-r --switch-on-reboot".
-2. Make an option for help: "-h --help".
-3. Make an option to switch without disabling the Display Manager: "-d --do-not-disable-the-display-manager".
-4. Make it use the font from /etc/vconsole.conf if present.
-5. Turn this into a source that compiles with a compiler.
-6. Make a configure script for selecting PREFIX.
-7. Add colors and an option to disable colors: "--no-color".
-8. Make the script run all commands with polkit (But it only asks for password once) instead of sudo.
-9. Make an Initial Release.
-...
+## Required Dependencies
+* systemd
+* bash
+* make
+* coreutils
 
-Required Dependencies:
-1. sudo (Or polkit, If you modify the gui-cli-toggle bash script)
-2. systemd
-3. bash
-4. make
-5. coreutils
+## Display Managers (CHOOSE ONLY ONE)
+* gdm
+* sddm
+* lightdm
+* lxdm
 
-Display Managers (CHOOSE ONLY ONE):
-1. gdm
-2. sddm
-3. lightdm
-4. lxdm
-5. xdm
-6. ly
+## Installation
+### Arch Linux
+Using yay:
+```sh
+yay -S gui-cli-toggle
+```
 
-Installing the Script:
-1. The default PREFIX is /usr/local, If you want to use something like /usr or /opt/gui-cli-toggle, Then run 'sed -i "s|/usr/local|/usr|g" Makefile', Or 'sed -i "s|/usr/local|/opt/gui-cli-toggle|g" Makefile'.
-2. Make sure you have the Required Dependencies.
-3. Run "make install" as the root user. (The output will be verbose so you know exactly what this does)
-4. If you are not using /usr or /usr/local and/or the PREFIX/bin is not in your PATH, Then you will have to run PREFIX/bin/gui-cli-toggle, For example: "/opt/gui-cli-toggle/bin/gui-cli-toggle".
+Using paru:
+```sh
+paru -S gui-cli-toggle
+```
 
-If you don't know what these variables mean, Then:
-1. PATH: The PATH variable is exported to the path of binaries, For Example PATH=/usr/bin:/usr/local/bin:/usr/sbin:/usr/local/sbin.
-2. PREFIX: The PREFIX variable is usually /usr/local, But /usr is the most preferred, Especially in LFS (Linux From Scratch), For example: if you make the PREFIX /foo/bar, Then the binary will be in /foo/bar/bin/gui-cli-toggle.
+Manual installation: (Requires git)
+```sh
+git clone https://aur.archlinux.org/gui-cli-toggle.git gui-cli-toggle.AUR
+cd gui-cli-toggle.AUR
+makepkg -si
+cd ..
+rm -rf gui-cli-toggle.AUR
+```
+
+### Installing from Source for LFS (With Systemd) and Other Distributions (With Systemd)
+First grab a Release Tarball and then run these commands:
+```sh
+tar -xvf gui-cli-toggle-<x>.<y>.<z>.tar.xz
+cd gui-cli-toggle-<x>.<y>.<z>
+```
+
+Run this command as the root user:
+```sh
+make install
+```
+
+Run the rest as the previous user:
+```sh
+cd ..
+rm -rf gui-cli-toggle-<x>.<y>.<z>
+```
+
+## TODOLIST
+- [ ] Make an option to switch on Reboot: "-r --switch-on-reboot".
+- [ ] Make an option to switch without disabling the Display Manager: "-d --do-not-disable-the-display-manager".
+- [ ] Add support for other Init Systems such as OpenRC and SysVInit (Primarily with LFS-Bootscripts).
