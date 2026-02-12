@@ -31,7 +31,7 @@ cd ..
 rm -rf gui-cli-toggle.AUR
 ```
 
-### Installing from Source for LFS (With Systemd) and Other Distributions (With Systemd)
+### Installing from Source for Other Distributions (With Systemd)
 First grab a Release Tarball and then run these commands:
 ```sh
 tar -xvf gui-cli-toggle-<x>.<y>.<z>.tar.xz
