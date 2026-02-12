@@ -1,5 +1,3 @@
-I made this fork for gui-cli-toggle now because I've switched from Glitt3ring to Zheralix.
-
 TODOLIST:
 1. Make an option to switch on Reboot: "-r --switch-on-reboot".
 2. Make an option for help: "-h --help".
