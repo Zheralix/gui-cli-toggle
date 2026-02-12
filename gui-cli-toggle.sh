@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gui_cli_toggle_variable_VERSION="2.0.0"
+gui_cli_toggle_variable_VERSION="2.0.1"
 gui_cli_toggle_variable_TARGET="$(systemctl get-default)"
 
 gui_cli_toggle_function_confirm() {
