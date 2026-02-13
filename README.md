@@ -50,6 +50,5 @@ rm -rf gui-cli-toggle-<x>.<y>.<z>
 ```
 
 ## TODOLIST
-- [ ] Make an option to switch on Reboot: "-r --switch-on-reboot".
-- [ ] Make an option to switch without disabling the Display Manager: "-d --do-not-disable-the-display-manager".
+- [X] Make an option to switch on Reboot: [-r --reboot].
 - [ ] Add support for other Init Systems such as OpenRC and SysVInit (Primarily with LFS-Bootscripts).
