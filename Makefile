@@ -12,8 +12,8 @@ all:
         @echo You can also run \'head -n7 Makefile\' for a list of settings and variables\.
 
 install:
-        mkdir   -p -v                      ${DESTDIR}${BINDIR}
-        install -v -m755 gui-cli-toggle.sh ${DESTDIR}${BINDIR}/gui-cli-toggle
+        mkdir   -p                      ${DESTDIR}${BINDIR}
+        install -m755 gui-cli-toggle.sh ${DESTDIR}${BINDIR}/gui-cli-toggle
         @echo Installed gui-cli-toggle\.
         @echo -n -e "\e[1;31m"
         @echo "+------------------------------------------------------------------------------+"
@@ -28,14 +28,14 @@ install:
         @echo -e "\e[1;32m+------------------------------------------------------------------------------+\e[0m"
 
 install-without-msg:
-        mkdir   -p -v                      ${DESTDIR}${BINDIR}
-        install -v -m755 gui-cli-toggle.sh ${DESTDIR}${BINDIR}/gui-cli-toggle
+        mkdir   -p                      ${DESTDIR}${BINDIR}
+        install -m755 gui-cli-toggle.sh ${DESTDIR}${BINDIR}/gui-cli-toggle
 
 uninstall:
-        rm -v ${DESTDIR}${BINDIR}/gui-cli-toggle
+        rm ${DESTDIR}${BINDIR}/gui-cli-toggle
         @echo Uninstalled gui-cli-toggle\.
 
 uninstall-without-msg:
-        rm -v ${DESTDIR}${BINDIR}/gui-cli-toggle
+        rm ${DESTDIR}${BINDIR}/gui-cli-toggle
 
 .PHONY: all install install-without-msg uninstall uninstall-without-msg
